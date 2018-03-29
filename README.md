@@ -20,4 +20,4 @@ npm run build
 
 You can manually modify the url with watching `src/router.js`.
 
-`iView` is very easy like `Element`. More components just see [https://www.iviewui.com/overview](https://www.iviewui.com/overview).  
+`iView` study very easily like `Element`. More components just see [https://www.iviewui.com/overview](https://www.iviewui.com/overview).  
