@@ -18,6 +18,13 @@ const routers = [{
       title: 'layout'
     },
     component: (resolve) => require(['./views/basic/layout.vue'], resolve)
+  },
+  {
+    path: '/basic/button',
+    meta: {
+      title: 'button'
+    },
+    component: (resolve) => require(['./views/basic/button.vue'], resolve)
   }
 ];
 export default routers;
