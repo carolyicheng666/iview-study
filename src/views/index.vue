@@ -27,6 +27,7 @@
 <template>
     <div class="index">
         <Row type="flex" justify="center" align="middle">
+            
             <Col span="24">
                 <h1>
                     <img src="../images/logo.png">
@@ -34,6 +35,14 @@
                 <h2>
                     <p>Welcome to your iView app!</p>
                     <Button type="ghost" @click="handleStart">Start iView</Button>
+                    <Row type="flex" justify="space-around" class="code-row-bg" style="padding-top: 20px;">
+                        <Col span="8">
+                            <Button type="primary" long @click="gotoBasic" size="large">goto Basic</Button>
+                        </Col>
+                        <Col span="8">
+                            <Button type="warning" long @click="gotoForm" size="large">goto Form</Button>
+                        </Col>
+                    </Row>
                 </h2>
             </Col>
         </Row>
@@ -47,6 +56,12 @@
                     title: 'Bravo',
                     content: 'Now, enjoy the convenience of iView.'
                 });
+            },
+            gotoBasic() {
+                window.location.href = './basic/grid'
+            },
+            gotoForm() {
+                window.location.href = './form/input'
             }
         }
     }

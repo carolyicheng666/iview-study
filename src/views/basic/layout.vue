@@ -325,7 +325,7 @@
       <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
     </Layout>
     <br>
-    <h1>侧边布局</h1>
+    <!-- <h1>侧边布局</h1>
     <p>侧边两列式布局。页面横向空间有限时，侧边导航可收起。</p>
     <p>侧边导航在页面布局上采用的是左右的结构，一般主导航放置于页面的左侧固定位置，辅助菜单放置于工作区顶部。内容根据浏览器终端进行自适应，能提高横向空间的使用率，但是整个页面排版不稳定。侧边导航的模式层级扩展性强，一、二、三级导航项目可以更为顺畅且具关联性的被展示，同时侧边导航可以固定，使得用户在操作和浏览中可以快速的定位和切换当前位置，有很高的操作效率。但这类导航横向页面内容的空间会被牺牲一部份。</p>
     <Layout :style="{minHeight: '10vh'}">
@@ -358,7 +358,7 @@
           </Card>
         </Content>
       </Layout>
-    </Layout>
+    </Layout> -->
     <br>
     <h1>自定义触发器</h1>
     <p>要使用自定义触发器，可以设置hide-trigger属性来隐藏默认触发器，也可以通过slot替换默认触发器。</p>
@@ -416,6 +416,18 @@
         </Content>
       </Layout>
     </Layout>
+
+    <Row :gutter="32" style="border-top: 1px solid #ccc; margin-top: 50px; padding-top: 20px;">
+      <Col span="8">
+        <Button type="primary" long @click="previous" size="large">previous</Button>
+      </Col>
+      <Col span="8">
+        <Button type="error" long @click="home" size="large">home</Button>
+      </Col>
+      <Col span="8">
+        <Button type="primary" long @click="next" size="large">next</Button>
+      </Col>
+    </Row>
   </div>
 </template>
 <script>
@@ -442,6 +454,15 @@ export default {
   methods: {
     collapsedSider() {
       this.$refs.side1.toggleCollapse();
+    },
+    previous() {
+      window.location.href = './grid'
+    },
+    home() {
+      window.location.href = '../../'
+    },
+    next() {
+      window.location.href = './button'
     }
   }
 }

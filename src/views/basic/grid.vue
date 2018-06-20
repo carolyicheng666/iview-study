@@ -153,10 +153,29 @@
       <Col class="bs" :xs="{ span: 11, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</Col>
       <Col class="bs" :xs="{ span: 5, offset: 1 }" :lg="{ span: 6, offset: 2 }">Col</Col>
     </Row>
+
+    <Row :gutter="32" style="border-top: 1px solid #ccc; margin-top: 50px; padding-top: 20px;">
+      <Col span="8">
+        <Button type="primary" long size="large" disabled>previous</Button>
+      </Col>
+      <Col span="8">
+        <Button type="error" long @click="home" size="large">home</Button>
+      </Col>
+      <Col span="8">
+        <Button type="primary" long @click="next" size="large">next</Button>
+      </Col>
+    </Row>
   </div>
 </template>
 <script>
 export default {
-
+  methods: {
+    home() {
+      window.location.href = '../../'
+    },
+    next() {
+      window.location.href = './layout'
+    }
+  }
 }
 </script>

@@ -201,6 +201,18 @@
       <Button type="ghost" icon="social-googleplus"></Button>
       <Button type="ghost" icon="social-tumblr"></Button>
     </ButtonGroup>
+
+    <Row :gutter="32" style="border-top: 1px solid #ccc; margin-top: 50px; padding-top: 20px;">
+      <Col span="8">
+        <Button type="primary" long @click="previous" size="large">previous</Button>
+      </Col>
+      <Col span="8">
+        <Button type="error" long @click="home" size="large">home</Button>
+      </Col>
+      <Col span="8">
+        <Button type="primary" long size="large" disabled>next</Button>
+      </Col>
+    </Row>
   </div>
 </template>
 <script>
@@ -217,6 +229,12 @@ export default {
     },
     toLoading2() {
       this.loading2 = true;
+    },
+    previous() {
+      window.location.href = './layout'
+    },
+    home() {
+      window.location.href = '../../'
     }
   }
 }
