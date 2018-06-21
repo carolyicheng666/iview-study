@@ -72,6 +72,57 @@ const form = [{
   }
 ];
 
-const routers = [...index, ...basic, ...form];
+const view = [{
+    path: '/view/card',
+    meta: {
+      title: 'card'
+    },
+    component: (resolve) => require(['./views/view/card.vue'], resolve)
+  },
+  {
+    path: '/view/message',
+    meta: {
+      title: 'message'
+    },
+    component: (resolve) => require(['./views/view/message.vue'], resolve)
+  },
+  {
+    path: '/view/notice',
+    meta: {
+      title: 'notice'
+    },
+    component: (resolve) => require(['./views/view/notice.vue'], resolve)
+  },
+  {
+    path: '/view/modal',
+    meta: {
+      title: 'modal'
+    },
+    component: (resolve) => require(['./views/view/modal.vue'], resolve)
+  },
+  {
+    path: '/view/progress',
+    meta: {
+      title: 'progress'
+    },
+    component: (resolve) => require(['./views/view/progress.vue'], resolve)
+  },
+  {
+    path: '/view/avatar',
+    meta: {
+      title: 'avatar'
+    },
+    component: (resolve) => require(['./views/view/avatar.vue'], resolve)
+  },
+  {
+    path: '/view/badge',
+    meta: {
+      title: 'badge'
+    },
+    component: (resolve) => require(['./views/view/badge.vue'], resolve)
+  }
+];
+
+const routers = [...index, ...basic, ...form, ...view];
 
 export default routers;
