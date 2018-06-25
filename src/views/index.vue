@@ -46,6 +46,9 @@
           <Col span="8">
             <Button type="success" long @click="gotoView" size="large">goto View</Button>
           </Col>
+          <Col span="8">
+            <Button type="error" long @click="gotoNavigation" size="large">goto Navigation</Button>
+          </Col>
         </Row>  
       </h2>
       </Col>
@@ -69,6 +72,9 @@ export default {
     },
     gotoView() {
       window.location.href = './view/card'
+    },
+    gotoNavigation() {
+      window.location.href = './navigation/menu'
     }
   }
 }

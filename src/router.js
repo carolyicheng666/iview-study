@@ -144,6 +144,29 @@ const view = [{
   }
 ];
 
-const routers = [...index, ...basic, ...form, ...view];
+const navigation = [{
+    path: '/navigation/menu',
+    meta: {
+      title: 'menu'
+    },
+    component: (resolve) => require(['./views/navigation/menu.vue'], resolve)
+  },
+  {
+    path: '/navigation/tabs',
+    meta: {
+      title: 'tabs'
+    },
+    component: (resolve) => require(['./views/navigation/tabs.vue'], resolve)
+  },
+  {
+    path: '/navigation/steps',
+    meta: {
+      title: 'steps'
+    },
+    component: (resolve) => require(['./views/navigation/steps.vue'], resolve)
+  }
+];
+
+const routers = [...index, ...basic, ...form, ...view, ...navigation];
 
 export default routers;
