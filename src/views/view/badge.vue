@@ -60,7 +60,7 @@ h1 {
         <Button type="error" long @click="home" size="large">home</Button>
       </Col>
       <Col span="8">
-        <Button type="primary" long disabled size="large">next</Button>
+        <Button type="primary" long @click="next" size="large">next</Button>
       </Col>
     </Row>
   </div>
@@ -73,6 +73,9 @@ export default {
     },
     home() {
       window.location.href = '../../'
+    },
+    next() {
+      window.location.href = './collapse'
     }
   }
 }

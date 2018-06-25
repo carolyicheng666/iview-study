@@ -120,6 +120,27 @@ const view = [{
       title: 'badge'
     },
     component: (resolve) => require(['./views/view/badge.vue'], resolve)
+  },
+  {
+    path: '/view/collapse',
+    meta: {
+      title: 'collapse'
+    },
+    component: (resolve) => require(['./views/view/collapse.vue'], resolve)
+  },
+  {
+    path: '/view/timeline',
+    meta: {
+      title: 'timeline'
+    },
+    component: (resolve) => require(['./views/view/timeline.vue'], resolve)
+  },
+  {
+    path: '/view/carousel',
+    meta: {
+      title: 'carousel'
+    },
+    component: (resolve) => require(['./views/view/carousel.vue'], resolve)
   }
 ];
 
