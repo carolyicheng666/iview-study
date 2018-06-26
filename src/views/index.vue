@@ -36,20 +36,28 @@
         <Button type="ghost" @click="handleStart">Start iView</Button>
         <Row type="flex" justify="space-around" class="code-row-bg" style="padding-top: 20px;">
           <Col span="8">
-            <Button type="primary" long @click="gotoBasic" size="large">goto Basic</Button>
+            <Button type="primary" long @click="basic" size="large" shape="circle">Basic</Button>
           </Col>
           <Col span="8">
-            <Button type="warning" long @click="gotoForm" size="large">goto Form</Button>
+            <Button type="warning" long @click="form" size="large" shape="circle">Form</Button>
           </Col>
         </Row>
         <Row type="flex" justify="space-around" class="code-row-bg" style="padding-top: 20px;">
           <Col span="8">
-            <Button type="success" long @click="gotoView" size="large">goto View</Button>
+            <Button type="success" long @click="view" size="large" shape="circle">View</Button>
           </Col>
           <Col span="8">
-            <Button type="error" long @click="gotoNavigation" size="large">goto Navigation</Button>
+            <Button type="error" long @click="navigation" size="large" shape="circle">Navigation</Button>
           </Col>
-        </Row>  
+        </Row>
+        <Row type="flex" justify="space-around" class="code-row-bg" style="padding-top: 20px;">
+          <Col span="8">
+            <Button type="warning" long @click="chart" size="large" shape="circle">Chart</Button>
+          </Col>
+          <Col span="8">
+            <Button type="info" long @click="other" size="large" shape="circle">Other</Button>
+          </Col>
+        </Row>
       </h2>
       </Col>
     </Row>
@@ -64,17 +72,23 @@ export default {
         content: 'Now, enjoy the convenience of iView.'
       });
     },
-    gotoBasic() {
+    basic() {
       window.location.href = './basic/grid'
     },
-    gotoForm() {
+    form() {
       window.location.href = './form/input'
     },
-    gotoView() {
+    view() {
       window.location.href = './view/card'
     },
-    gotoNavigation() {
+    navigation() {
       window.location.href = './navigation/menu'
+    },
+    chart() {
+      window.location.href = './chart/circle'
+    },
+    other() {
+      window.location.href = './other/backtop'
     }
   }
 }
